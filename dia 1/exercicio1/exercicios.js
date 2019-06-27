@@ -22,19 +22,16 @@ function sumAll(number) {
 function destroyer() {
   var lista = [];
   var finalArray = [];
-  var k = 0;
   
   for (var j = 1; j <= arguments.length; j++)
   {
     lista[j] = arguments[j];
-  }
-  
+  }  
   
   for (var i = 0; i < arguments[0].length; i++) {
     if (lista.indexOf(arguments[0][i]) === -1)
     {
-      finalArray[k] = arguments[0][i];
-      k++;
+      finalArray.push(arguments[0][i]);
     }
 }
   return(finalArray);  
