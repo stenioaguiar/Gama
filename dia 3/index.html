@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+        <main class="container">
+            <div class="input-lancamento">
+                <div class="input-box">
+                    <input id="fonte" type="text"><br>
+                    <button id ="b1" type="button">Contagem</button><br>
+                </div>
+                <h4 id="text"></h4>
+            </div>
+            <div class="area-lancamento">
+                <img id="imagem" src="foguete.png">
+            </div>
+        </main>
+
+    </body>
+    <script>
+        var button = document.getElementById("b1");
+        button.addEventListener('click', function(event) {
+            var contador = document.getElementById("fonte").value;
+             
+            regressiva(contador, lancamento);
+
+            });
+        
+        function regressiva(contador, callback) {
+            var texto = document.getElementById("text"); 
+            var intervalo = setInterval(function(){
+                if (contador >= 0)
+                {
+                    texto.innerHTML = contador;
+                    contador -= 1;
+                }
+                else
+                {
+                    clearInterval(intervalo)
+                    callback();
+                }
+            },1000);
+            
+        };
+        var foguete = document.getElementById('imagem');
+        function lancamento()
+        {   
+            var posicao = foguete.offsetTop;
+            var num = 0;
+            var interval = setInterval( function() {
+                if (posicao > 0) {
+                    posicao -= 10;
+                    foguete.style.top = posicao + 'px';
+                }else {
+                    alert('chegou ao topo');
+                    clearInterval(interval)
+                }
+            }, 200);
+            
+        }
+    </script>
+</html>

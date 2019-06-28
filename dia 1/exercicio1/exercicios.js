@@ -33,7 +33,7 @@ function destroyer() {
     {
       finalArray.push(arguments[0][i]);
     }
-}
+  }
   return(finalArray);  
 }
 
