@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+        <input id="fonte" type="text">
+        <br><br>
+        <img id="imagem" src="no.png" >
+    </body>
+    <script>
+        var fonte = document.getElementById("fonte");
+        fonte.addEventListener('keyup', function(event) {
+            var nome = document.getElementById("fonte").value;
+            var imagem = document.getElementById("imagem");
+            switch (nome) {
+                case "uva":
+                    imagem.src = nome + ".jfif";
+                    break;
+                case "laranja":
+                    imagem.src = nome + ".jfif";
+                    break;
+                case "abacaxi":
+                    imagem.src = nome + ".jfif";
+                    break;
+                case "banana":
+                    imagem.src = nome + ".jfif";
+                    break;
+                case "maça":
+                    imagem.src = nome + ".jfif";
+                    break;
+                default:
+                    imagem.src = "no.png";
+            }       
+            });
+    </script>
+</html>

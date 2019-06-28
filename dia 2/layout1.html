@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+        <input id="fonte" type="text">
+        <button id ="b1" type="button">OK</button>
+        <h1 id="text"></h1>
+    </body>
+    <script>
+        var button = document.getElementById("b1");
+        button.addEventListener('click', function(event) {
+            var texto = document.getElementById("text");
+            texto.innerHTML =  document.getElementById("fonte").value;        
+            });
+    </script>
+</html>
