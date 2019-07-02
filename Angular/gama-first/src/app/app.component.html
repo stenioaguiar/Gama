@@ -1,0 +1,19 @@
+<h1>Hello World</h1>
+
+<i>{{ title }}</i><br>
+
+
+<div *ngIf="title == 'Aguiar'"> mudou o nome</div><br>
+
+<button (click)=novoItem()>Novo número</button>
+
+<ul>
+  <li *ngFor="let item of items">
+    <app-todo-item [data]="item"></app-todo-item>
+  </li>
+</ul>
+
+<app-contador></app-contador>
+
+
+
