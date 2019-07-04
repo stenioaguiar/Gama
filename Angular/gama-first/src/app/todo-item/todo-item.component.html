@@ -2,6 +2,6 @@
     <b>Id =</b> {{ data.id }}<br>
     <b>Titulo =</b> {{ data.title }}<br>
     <b>Descrição =</b> {{ data.description }}<br>
-    <b>Finished =</b> {{ data.finished ? 'Sim': 'Não'}}<br>
-    <b>Data =</b> {{ data.date }}<br>
+    <b>Finished =</b> {{ data.finished | bool }}<br>
+    <b>Data =</b> {{ data.date | date: 'dd/MM/yyyy' }}<br>
 </div>
