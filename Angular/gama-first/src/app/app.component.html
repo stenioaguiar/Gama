@@ -1,11 +1,29 @@
+<div *ngIf='user$ | async; else deslogado'>
+        <div>
+                Olá {{ (user$ | async).email }}
+                <button (click)='logout()'> Sair </button>
+        </div>
+        
+        <div>
+                <a routerLink = "/">Home | </a>
+                <a routerLink = "/todos">Todos | </a>
+                <a routerLink = "/todos/add">Adicionar Todo | </a>
+                <a routerLink = "/cep">Cep-texto | </a>
+                <a routerLink = "/auth/login">Login | </a>
+                <a routerLink = "/auth/register">Cadastro | </a>
+        </div>
+        
+</div>
+
+<ng-template #deslogado>
+        <a routerLink = "/">Home | </a>
+        <a routerLink = "/cep">Cep-texto | </a>
+        <a routerLink = "/auth/login">Login | </a>
+        <a routerLink = "/auth/register">Cadastro | </a>
+</ng-template>
+
+<router-outlet></router-outlet>
 <p>APP: {{ contador }}</p>
 <app-contador></app-contador>
 <app-contador-botoes></app-contador-botoes>
 <br>
-<a routerLink = "/">Home | </a>
-<a routerLink = "/todos">Todos | </a>
-<a routerLink = "/todos/add">Adicionar Todo | </a>
-<a routerLink = "/cep">Cep-texto | </a>
-<a routerLink = "/cep/13480120">Cep | </a>
-<router-outlet></router-outlet>
-
